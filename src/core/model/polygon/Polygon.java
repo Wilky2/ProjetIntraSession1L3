@@ -12,6 +12,10 @@ public class Polygon {
 		this.listeSommet = Arrays.copyOf(listeSommet, listeSommet.length);
 	}
 	
+	public Polygon(Polygon p) {
+		this.listeSommet = Arrays.copyOf(p.listeSommet, p.listeSommet.length);
+	}
+	
 	public Point getSommmet(int i) {
 		return this.listeSommet[i];
 	}

@@ -1,14 +1,18 @@
 package core.model;
 
 import core.model.polygon.Polygon;
+import core.model.polygon.Rectangle;
+import core.model.polygon.Square;
+import core.model.prism.Prism;
 
 public class Playbook {
 
 	public static void main(String[] args) {
-		Polygon p = new Polygon(new Point[] {new Point((double) 0,(double) 0),new Point((double) 0,(double) 4),
-				new Point((double) 4,(double) 4),new Point((double) 4,(double) 0)});
-		
+		Polygon p = new Rectangle(4,5);
+		Prism pm = new Prism(p,5);
+
 		System.out.println(p.area() + " " + p.perimeter());
+		System.out.println(pm.areaBased() + " " + pm.volume());
 
 	}
 

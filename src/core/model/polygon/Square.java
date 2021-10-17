@@ -9,6 +9,11 @@ public class Square extends Rectangle {
 		this.cote = cote;
 	}
 	
+	public Square(Square s) {
+		super(s);
+		this.cote = s.cote;
+	}
+	
 	@Override
 	public String toString() {
 		return "Square [cote=" + cote + ", toString()=" + super.toString() + "]";
@@ -17,14 +22,6 @@ public class Square extends Rectangle {
 	public double getCote() {
 		return this.cote;
 	}
-
-
-
-	public void setCote(double cote) {
-		this.cote = cote;
-	}
-
-
 
 	public double area() {
 		return this.cote*this.cote;

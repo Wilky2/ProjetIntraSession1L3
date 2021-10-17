@@ -12,21 +12,19 @@ public class Rectangle extends Polygon {
 		this.large = l;
 		this.length = L; 
 	}
+	
+	public Rectangle(Rectangle r){
+		super(r);
+		this.large = r.large;
+		this.length = r.length;
+	}
 
 	public double getLarge() {
 		return this.large;
 	}
 
-	public void setLlarge(double l) {
-		this.large = l;
-	}
-
 	public double getLength() {
 		return this.length;
-	}
-
-	public void setLength(double L) {
-		this.length = L;
 	}
 
 	@Override
