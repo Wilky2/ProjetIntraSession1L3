@@ -9,7 +9,7 @@ public class Square extends Rectangle {
 		this.cote = cote;
 	}
 	
-	public Square(Square s) {
+	public Square(final Square s) {
 		super(s);
 		this.cote = s.cote;
 	}

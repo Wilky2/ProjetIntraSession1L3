@@ -12,7 +12,7 @@ public class Polygon {
 		this.listeSommet = Arrays.copyOf(listeSommet, listeSommet.length);
 	}
 	
-	public Polygon(Polygon p) {
+	public Polygon(final Polygon p) {
 		this.listeSommet = Arrays.copyOf(p.listeSommet, p.listeSommet.length);
 	}
 	

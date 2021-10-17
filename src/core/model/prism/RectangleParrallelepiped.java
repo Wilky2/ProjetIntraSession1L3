@@ -11,6 +11,12 @@ public class RectangleParrallelepiped extends Prism {
 		this.large = large;
 		this.length = length;
 	}
+	
+	public RectangleParrallelepiped(final RectangleParrallelepiped r) {
+		super(r);
+		this.large = r.large;
+		this.length = r.length;
+	}
 
 	public double getLarge() {
 		return large;

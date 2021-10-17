@@ -1,7 +1,5 @@
 package core.model.prism;
 
-import core.model.polygon.Square;
-
 public class Cube extends RectangleParrallelepiped {
 	
 	private double arrete;
@@ -9,6 +7,11 @@ public class Cube extends RectangleParrallelepiped {
 	public Cube(double arrete) {
 		super(arrete,arrete,arrete);
 		this.arrete = arrete;
+	}
+	
+	public Cube(final Cube c) {
+		super(c);
+		this.arrete = c.arrete;
 	}
 
 	public double getArrete() {

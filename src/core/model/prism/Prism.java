@@ -13,8 +13,8 @@ public class Prism {
 		this.height = height;
 	}
 	
-	public Prism(Prism p) {
-		this.based = new Polygon(p.getPolygon());
+	public Prism(final Prism p) {
+		this.based = p.based;
 		this.height = p.height;
 	}
 
@@ -32,11 +32,11 @@ public class Prism {
 	}
 	
 	public double areaBased() {
-		return based.area();
+		return this.based.area();
 	}
 	
 	public double volume() {
-		return areaBased() * height;
+		return areaBased() * this.height;
 	}
 	
 }

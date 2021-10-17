@@ -5,8 +5,13 @@ public class Circle {
 	private double ray;
 	
 	public Circle(Point center, double ray) {
-		this.center = center;
+		this.center = new Point(center);
 		this.ray = ray;
+	}
+	
+	public Circle(final Circle c) {
+		this.center = new Point(c.center);
+		this.ray = c.ray;
 	}
 
 	public Point getCenter() {

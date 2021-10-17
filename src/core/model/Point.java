@@ -10,7 +10,7 @@ public class Point {
 		this.y = y;
 	}
 	
-	public Point(Point p) {
+	public Point(final Point p) {
 		this.x = p.x;
 		this.y = p.y;
 	}
@@ -32,7 +32,7 @@ public class Point {
 		return "Point [x=" + x + ", y=" + y + "]";
 	}
 	
-	public static double distance(Point p1,Point p2) {
+	public static double distance(final Point p1, final Point p2) {
 		double d1,d2;
 		d1 = p2.getX()-p1.getX();
 		d2 = p2.getY()-p1.getY();

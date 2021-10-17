@@ -13,7 +13,7 @@ public class Rectangle extends Polygon {
 		this.length = L; 
 	}
 	
-	public Rectangle(Rectangle r){
+	public Rectangle(final Rectangle r){
 		super(r);
 		this.large = r.large;
 		this.length = r.length;
