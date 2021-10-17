@@ -1,22 +1,26 @@
 package core.controller;
 
-import core.model.polygon.*;
-import core.view.DisplayPolyg;
+import core.model.polygon.Polygon;
+import core.model.polygon.Rectangle;
+import core.model.polygon.Square;
+import core.view.Display;
 import core.view.Reader;
 
 public class Controller {
+  Display a = new Display();
   Reader reading = new Reader();
+  
   Polygon polygon;
   Rectangle rec = new Rectangle(0, 0);
   Square square = new Square(0);
 
-  public void run() {
+  public void headerPolygon() {
     polygonSwitchCase();
   }
 
-
   public void polygonSwitchCase() {
-    polygonMenu();
+    a.getdPolygone().showPolygonPart();
+    // DisplayPolygone.listViewPolygon();
 
     int choice = reading.readingInt();
 
@@ -32,15 +36,16 @@ public class Controller {
         break;
 
       default:
-        polygonMenu();
+        a.getdPolygone().listViewPolygon();
+        // DisplayPolygone.listViewPolygon();
         System.out.println("Choix inexistante !");
         break;
     }
   }
 
   public void polygonViewRectangle() {
-
-    DisplayPolyg.showRectanglePart();
+    a.getdPolygone().showRectanglePart();
+    // DisplayPolygone.showRectanglePart();
     System.out.println("Entrer Les Values ");
 
     System.out.println(".-Longueur");
@@ -53,23 +58,17 @@ public class Controller {
     // rec.setLength(val1);
     // rec.setLlarge(val2);
 
-    DisplayPolyg.display("L'aire du rectangle = " + rec.area());
-    DisplayPolyg.display("Perimetre de rectangle = " + rec.perimeter());
+    a.display("L'aire du rectangle = " + rec.area());
+    a.display("Perimetre de rectangle = " + rec.perimeter());
   }
 
-  public void polygonViewCircle() {
-
-    // DisplayPolyg.showRectanglePart();
-
-    // System.out.println("Entrer Les Values ");
-    // System.out.println(".  *Center");
-    // System.out.println(".  *Rayon");
-
+  public void polygonViewPolygon() {
+      
   }
 
   public void polygonViewSquare() {
-
-    DisplayPolyg.showSquarePart();
+    a.getdPolygone().showSquarePart();
+    // a.showSquarePart();
     System.out.println("Entrer le cote ");
 
     System.out.println("-cote");
@@ -78,12 +77,9 @@ public class Controller {
     square = new Square(val1);
     // square.setCote(val1);
 
-    DisplayPolyg.display("L'aire du carre = " + square.area());
-    DisplayPolyg.display("Perimetre de carre = " + square.perimeter());
+    a.display("L'aire du carre = " + square.area());
+    a.display("Perimetre de carre = " + square.perimeter());
 
   }
 
-  public void polygonMenu() {
-    DisplayPolyg.listViewPolygon();
-  }
 }

@@ -9,6 +9,6 @@ public class PlayBook {
 
     public static void main(String[] args) {
         Controller co = new Controller();
-        co.run();
+        co.headerPolygon();
     }
 }

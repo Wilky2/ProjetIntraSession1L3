@@ -18,6 +18,9 @@ public class Prism {
 		this.height = p.height;
 	}
 
+	public Prism(double d, double val2) {
+	}
+
 	public Polygon getPolygon() {
 		return new Polygon(based);
 	}
