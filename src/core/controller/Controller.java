@@ -140,8 +140,8 @@ public class Controller {
     double val1 = reading.readingDouble();
     prism = new Cube(val1);
     
-    a.display("\nL'aire du carre = " + prism.areaBased());
-    a.display("Perimetre de carre = " + prism.volume());
+    a.display("\nL'aire du prisme = " + prism.areaBased());
+    a.display("La volume = " + prism.volume());
 
   }
 
