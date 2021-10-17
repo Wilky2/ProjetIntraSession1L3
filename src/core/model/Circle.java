@@ -10,19 +10,11 @@ public class Circle {
 	}
 
 	public Point getCenter() {
-		return center;
-	}
-
-	public void setCenter(Point center) {
-		this.center = center;
+		return new Point(center);
 	}
 
 	public double getRay() {
 		return ray;
-	}
-
-	public void setRay(double ray) {
-		this.ray = ray;
 	}
 
 	@Override

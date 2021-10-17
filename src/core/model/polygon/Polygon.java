@@ -17,7 +17,7 @@ public class Polygon {
 	}
 	
 	public Point getSommmet(int i) {
-		return this.listeSommet[i];
+		return new Point(this.listeSommet[i]);
 	}
 	
 	public double getCote(int i) {

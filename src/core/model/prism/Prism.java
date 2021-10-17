@@ -9,12 +9,17 @@ public class Prism {
 	private double height;
 
 	public Prism(Polygon polygon, double height) {
-		this.based = new Polygon(polygon);
+		this.based = polygon;
 		this.height = height;
+	}
+	
+	public Prism(Prism p) {
+		this.based = new Polygon(p.getPolygon());
+		this.height = p.height;
 	}
 
 	public Polygon getPolygon() {
-		return based;
+		return new Polygon(based);
 	}
 
 	public double getHeight() {
