@@ -1,7 +1,5 @@
 package core.model.prism;
 
-import core.model.polygon.Square;
-
 public class Cube extends RectangleParrallelepiped {
 	
 	private double arrete;

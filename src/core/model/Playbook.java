@@ -2,7 +2,6 @@ package core.model;
 
 import core.model.polygon.Polygon;
 import core.model.polygon.Rectangle;
-import core.model.polygon.Square;
 import core.model.prism.Cube;
 import core.model.prism.Prism;
 

@@ -49,8 +49,9 @@ public class Controller {
     System.out.println(".-Largeur");
     double val2 = reading.readingDouble();
 
-    rec.setLength(val1);
-    rec.setLlarge(val2);
+    rec = new Rectangle(val1, val2);
+    // rec.setLength(val1);
+    // rec.setLlarge(val2);
 
     DisplayPolyg.display("L'aire du rectangle = " + rec.area());
     DisplayPolyg.display("Perimetre de rectangle = " + rec.perimeter());
@@ -74,7 +75,8 @@ public class Controller {
     System.out.println("-cote");
     double val1 = reading.readingDouble();
 
-    square.setCote(val1);
+    square = new Square(val1);
+    // square.setCote(val1);
 
     DisplayPolyg.display("L'aire du carre = " + square.area());
     DisplayPolyg.display("Perimetre de carre = " + square.perimeter());
