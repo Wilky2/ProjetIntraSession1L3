@@ -11,15 +11,13 @@ public class Display {
     private DisplayPrism dPrism = new DisplayPrism();
 
     public void displayMenuSec() {
-        display("******Affichage Vue**********");
-        display("1 Polygone");
-        display("2 Prisme");
-        display("3 Cercle");
-        display("4 Cylindre");
-    }
-
-    public void display(Object str) {
-        System.out.println(str);
+        display("\n******Running Head Programm**********");
+        display("1 -Polygone");
+        display("2 -Prisme");
+        display("3 -Cercle");
+        display("4 -Cylindre");
+        display("");
+        display("choix 1-4");
     }
 
     public DisplayPolygone getdPolygone() {
@@ -34,4 +32,7 @@ public class Display {
         return dPrism;
     }
 
+    public void display(Object str) {
+        System.out.println(str);
+    }
 }

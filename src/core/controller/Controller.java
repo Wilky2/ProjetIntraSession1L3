@@ -3,23 +3,51 @@ package core.controller;
 import core.model.polygon.Polygon;
 import core.model.polygon.Rectangle;
 import core.model.polygon.Square;
+import core.model.prism.Prism;
 import core.view.Display;
 import core.view.Reader;
 
 public class Controller {
   Display a = new Display();
   Reader reading = new Reader();
-  
+
   Polygon polygon;
+  Prism prism;
   Rectangle rec = new Rectangle(0, 0);
   Square square = new Square(0);
 
-  public void headerPolygon() {
-    polygonSwitchCase();
+  // ------------Running Programme---------------
+
+  public void start() {
+    switchCaseProgramm();
   }
 
+  // -------------Switch Case All The Programm--------------
+
+  public void switchCaseProgramm() {
+
+    a.displayMenuSec();
+
+    int choice = reading.readingInt();
+
+    switch (choice) {
+      case 1:
+        polygonSwitchCase();
+        break;
+      case 2:
+        prismSwitchCase();
+      break;
+      default:
+        switchCaseProgramm();
+        a.display("Choix inexistant, rentrer une choix correspondant");
+        break;
+    }
+  }
+
+  // ===============Polygon Parts===============
+
   public void polygonSwitchCase() {
-    a.getdPolygone().showPolygonPart();
+    a.getdPolygone().listViewPolygon();
     // DisplayPolygone.listViewPolygon();
 
     int choice = reading.readingInt();
@@ -37,8 +65,7 @@ public class Controller {
 
       default:
         a.getdPolygone().listViewPolygon();
-        // DisplayPolygone.listViewPolygon();
-        System.out.println("Choix inexistante !");
+        System.out.println("Choix inexistant !");
         break;
     }
   }
@@ -46,6 +73,70 @@ public class Controller {
   public void polygonViewRectangle() {
     a.getdPolygone().showRectanglePart();
     // DisplayPolygone.showRectanglePart();
+    // System.out.println("Entrer Les Values ");
+
+    System.out.println("Valeur Longueur");
+    double val1 = reading.readingDouble();
+
+    System.out.println("Valeur Largeur");
+    double val2 = reading.readingDouble();
+
+    rec = new Rectangle(val1, val2);
+
+    a.display("\nL'aire du rectangle = " + rec.area());
+    a.display("Perimetre du rectangle = " + rec.perimeter());
+  }
+
+  public void polygonViewPolygon() {
+
+  }
+
+  public void polygonViewSquare() {
+    a.getdPolygone().showSquarePart();
+    // a.showSquarePart();
+    System.out.println("Entrer le cote ");
+
+    System.out.println("Valeur du cote");
+    double val1 = reading.readingDouble();
+
+    square = new Square(val1);
+    // square.setCote(val1);
+
+    a.display("\nL'aire du carre = " + square.area());
+    a.display("Perimetre de carre = " + square.perimeter());
+
+  }
+
+  // ===============end Polygon=================
+
+  // ===============Prisme Parts================
+
+  public void prismSwitchCase() {
+    a.getdPrism().listViewPrism();
+
+    int choice = reading.readingInt();
+
+    switch (choice) {
+      case 1:
+        prismViewCube();
+        break;
+      case 2:
+        prismViewCube();
+        break;
+      case 3:
+        prismViewCube();
+        break;
+
+      default:
+        a.getdPrism().listViewPrism();
+        System.out.println("Choix inexistant !");
+        break;
+    }
+  }
+
+  public void prismViewCube() {
+
+    a.getdCircle().showRectanglePart();
     System.out.println("Entrer Les Values ");
 
     System.out.println(".-Longueur");
@@ -54,32 +145,32 @@ public class Controller {
     System.out.println(".-Largeur");
     double val2 = reading.readingDouble();
 
-    rec = new Rectangle(val1, val2);
+  }
+
+  public void prismViewprism() {
+    a.getdPrism().showPrismPart();
+    // DisplayPrism.showPrismPart();
+    System.out.println("Entrer Les Values ");
+
+    System.out.println(".-Base");
+    // double val1 = reading.readingDouble();
+
+    System.out.println(".-Hauteru");
+    double val2 = reading.readingDouble();
+
+    prism = new Prism(null, val2);
     // rec.setLength(val1);
     // rec.setLlarge(val2);
 
-    a.display("L'aire du rectangle = " + rec.area());
-    a.display("Perimetre de rectangle = " + rec.perimeter());
+    a.display("L'aire du rectangle = " + prism.areaBased());
+    a.display("Perimetre de rectangle = " + prism.volume());
   }
 
-  public void polygonViewPolygon() {
-      
+  public void prismViewRectangleParrallepiped() {
+
+    a.getdPrism().showRectangleParrallepipedPart();
   }
 
-  public void polygonViewSquare() {
-    a.getdPolygone().showSquarePart();
-    // a.showSquarePart();
-    System.out.println("Entrer le cote ");
-
-    System.out.println("-cote");
-    double val1 = reading.readingDouble();
-
-    square = new Square(val1);
-    // square.setCote(val1);
-
-    a.display("L'aire du carre = " + square.area());
-    a.display("Perimetre de carre = " + square.perimeter());
-
-  }
+  // ===============end Prisme================
 
 }
