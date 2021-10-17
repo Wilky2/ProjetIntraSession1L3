@@ -2,8 +2,8 @@ package core.model;
 
 public class Point {
 	
-	double x;
-	double y;
+	private double x;
+	private double y;
 	
 	public Point(double x, double y) {
 		this.x = x;
@@ -24,6 +24,13 @@ public class Point {
 	@Override
 	public String toString() {
 		return "Point [x=" + x + ", y=" + y + "]";
+	}
+	
+	public static double distance(Point p1,Point p2) {
+		double d1,d2;
+		d1 = p2.getX()-p1.getX();
+		d2 = p2.getY()-p1.getY();
+		return Math.sqrt((d1*d1) + (d2*d2));
 	}
 
 }
