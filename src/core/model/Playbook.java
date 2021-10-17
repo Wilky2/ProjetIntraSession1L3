@@ -9,7 +9,7 @@ public class Playbook {
 				new Point((double) 4,(double) 4),new Point((double) 4,(double) 0)});
 		
 		System.out.println(p.area() + " " + p.perimeter());
-
+		
 		
 	}
 
