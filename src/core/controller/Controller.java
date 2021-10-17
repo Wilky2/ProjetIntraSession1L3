@@ -3,6 +3,7 @@ package core.controller;
 import core.model.polygon.Polygon;
 import core.model.polygon.Rectangle;
 import core.model.polygon.Square;
+import core.model.prism.Cube;
 import core.model.prism.Prism;
 import core.view.Display;
 import core.view.Reader;
@@ -16,7 +17,7 @@ public class Controller {
   Rectangle rec = new Rectangle(0, 0);
   Square square = new Square(0);
 
-  // ------------Running Programme---------------
+  // ------------Running Programm---------------
 
   public void start() {
     switchCaseAllProgramm();
@@ -133,13 +134,14 @@ public class Controller {
   public void prismViewCube() {
 
     a.getdCircle().showRectanglePart();
-    System.out.println("\nEntrer les valuers ");
+    System.out.println("\nEntrer la valeur ");
 
-    System.out.println(" Entrer la Longueur");
+    
     double val1 = reading.readingDouble();
-
-    System.out.println(" Entrer la Largeur");
-    double val2 = reading.readingDouble();
+    prism = new Cube(val1);
+    
+    a.display("\nL'aire du carre = " + prism.areaBased());
+    a.display("Perimetre de carre = " + prism.volume());
 
   }
 
@@ -173,5 +175,8 @@ public class Controller {
   }
 
   // ===============end Prisme================
+
+
+  // ===============Circle Parts================
 
 }
