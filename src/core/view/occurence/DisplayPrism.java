@@ -6,22 +6,19 @@ public class DisplayPrism {
         display("\n******Menu Prism*******");
         display("1-  Cube");
         display("2-  Prism");
-        display("3-  Rectangle ");
+        display("3-  Rectangle");
     }
 
     public void showCubePart() {
         display("\n********Main Cube********");
-        display("Entrer les deux cotes : ");
     }
 
     public void showPrismPart() {
         display("\n********Main Prism********");
-        display("cotes : ");
     }
 
     public void showRectangleParrallepipedPart() {
-        display("\n********Main Rectangle Parrallepiped********");
-        display("cotes : ");
+        display("\n********Main Rectangle Parrallepipede********");
     }
 
     public void display(Object str) {
