@@ -1,5 +1,7 @@
 package core.controller;
 
+import java.util.InputMismatchException;
+
 import core.model.polygon.Polygon;
 import core.model.polygon.Rectangle;
 import core.model.polygon.Square;
@@ -17,7 +19,7 @@ public class Controller {
   Rectangle rec = new Rectangle(0, 0);
   Square square = new Square(0);
 
-  // ------------Running Programm--------------- 
+  // ------------Running Programm---------------
 
   public void start() {
     switchCaseAllProgramm();
@@ -27,21 +29,40 @@ public class Controller {
 
   public void switchCaseAllProgramm() {
 
-    a.displayMenuSec();
+    int choice;
+    try {
+      a.displayMenuSec();
+      choice = reading.readingInt();
 
-    int choice = reading.readingInt();
-
-    switch (choice) {
-      case 1:
-        polygonSwitchCase();
+      switch (choice) {
+        case 1:
+          polygonSwitchCase();
+          break;
+        case 2:
+          prismSwitchCase();
         break;
-      case 2:
-        prismSwitchCase();
-      break;
-      default:
+        default:
+          // switchCaseAllProgramm();
+          a.display("Choix inexistant, rentrer une choix valide");
+          break;
+      }
+    } catch (InputMismatchException e) {
+      a.display("Choix inexistant, rentrer une choix valide");
+      reading.readingString();
+    }
+
+    try {
+      a.display("Entrer 1 pour continer");
+
+      choice = reading.readingInt();
+
+      if (choice==1) {
         switchCaseAllProgramm();
-        a.display("Choix inexistant, rentrer une choix correspondant");
-        break;
+      } else {
+        a.display("Fin Programme");
+      }
+    } catch (InputMismatchException e) {
+      a.display("Fin programme");
     }
   }
 
@@ -136,10 +157,9 @@ public class Controller {
     a.getdCircle().showRectanglePart();
     System.out.println("\nEntrer la valeur ");
 
-    
     double val1 = reading.readingDouble();
     prism = new Cube(val1);
-    
+
     a.display("\nL'aire du prisme = " + prism.areaBased());
     a.display("La volume = " + prism.volume());
 
@@ -176,7 +196,47 @@ public class Controller {
 
   // ===============end Prisme================
 
-
   // ===============Circle Parts================
+
+  public void name() {
+    int choice;
+    try {
+      a.displayMenuSec();
+      choice = reading.readingInt();
+
+      switch (choice) {
+        case 1:
+          polygonSwitchCase();
+          break;
+        case 2:
+          prismSwitchCase();
+        break;
+        default:
+          // switchCaseAllProgramm();
+          a.display("Choix inexistant, rentrer une choix valide");
+          break;
+      }
+
+    } catch (InputMismatchException e) {
+      a.display("Choix inexistant, rentrer une choix valide");
+      reading.readingString();
+    }
+
+    // second
+
+    try {
+      a.display("Entrer 1 pour continer");
+
+      choice = reading.readingInt();
+
+      if (choice==1) {
+        // run();
+      } else {
+        a.display("Fin Programme");
+      }
+    } catch (InputMismatchException e) {
+      a.display("Fin programme");
+    }
+  }
 
 }
