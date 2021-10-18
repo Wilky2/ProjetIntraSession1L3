@@ -36,6 +36,7 @@ public class Controller {
     int choice;
     try {
       a.displayMenuSec();
+      a.display("\nChoix...");
       choice = reading.readingInt();
 
       switch (choice) {
@@ -48,7 +49,7 @@ public class Controller {
           break;
 
           case 3:
-          circle();
+          circleSwitchCase();
           break;
 
         default:
@@ -220,14 +221,14 @@ public class Controller {
 
   // ===============Circle Parts================
 
-  public void circle() {
+  public void circleSwitchCase() {
     a.getdCircle().listViewCircle();
     double val1, val2, val3;
 
-    System.out.println("Absciesse");
+    System.out.println("Valeur Abscisse");
     val1 = reading.readingDouble();
 
-    System.out.println("Ordonne Largeur");
+    System.out.println("Valeur Ordonne");
     val2 = reading.readingDouble();
 
     System.out.println("Rayon");
@@ -239,6 +240,7 @@ public class Controller {
     a.display("\nL'aire du cercle = " + circle.area());
     a.display("Perimetre du cercle = " + circle.perimeter());
   }
+  
   // ===============end Circle================
 
   // ===============Cylender Parts================
@@ -246,6 +248,7 @@ public class Controller {
   public void cylenderSwitchCylender() {
 
   }
+  
   // ===============end Cylender================
 
 }

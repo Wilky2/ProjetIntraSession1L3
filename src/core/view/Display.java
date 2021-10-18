@@ -17,7 +17,7 @@ public class Display {
         display("3 -Cercle");
         display("4 -Cylindre");
         display("");
-        display("choix 1-4");
+        display("choix compris entre 1-4");
     }
 
     
