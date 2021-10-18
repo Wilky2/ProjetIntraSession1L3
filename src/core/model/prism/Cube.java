@@ -17,6 +17,13 @@ public class Cube extends RectangleParrallelepiped {
 	public double getArrete() {
 		return arrete;
 	}
+	
+	public void setArrete(double arrete) {
+		super.setLength(arrete);
+		super.setLarge(arrete);
+		super.setHeight(arrete);
+		this.arrete = arrete;
+	}
 
 	@Override
 	public String toString() {

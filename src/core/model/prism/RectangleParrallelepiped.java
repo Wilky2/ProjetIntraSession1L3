@@ -21,9 +21,21 @@ public class RectangleParrallelepiped extends Prism {
 	public double getLarge() {
 		return large;
 	}
+	
+	public void setLarge(double large) {
+		
+		super.setBased(new Rectangle(this.length,large));
+		this.large = large;
+		
+	}
 
 	public double getLength() {
 		return length;
+	}
+	
+	public void setLength(double length) {
+		super.setBased(new Rectangle(length,large));
+		this.length = length;
 	}
 
 	@Override

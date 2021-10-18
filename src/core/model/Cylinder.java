@@ -18,8 +18,16 @@ public class Cylinder {
 		return height;
 	}
 
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
 	public Circle getBased() {
-		return new Circle(based);
+		return based;
+	}
+
+	public void setBased(Circle based) {
+		this.based = based;
 	}
 
 	@Override

@@ -17,9 +17,17 @@ public class Circle {
 	public Point getCenter() {
 		return new Point(center);
 	}
+	
+	public void setCenter(Point center) {
+		this.center = new Point(center);
+	}
 
 	public double getRay() {
 		return ray;
+	}
+	
+	public void setRay(double ray) {
+		this.ray = ray;
 	}
 
 	@Override

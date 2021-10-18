@@ -18,12 +18,20 @@ public class Prism {
 		this.height = p.height;
 	}
 
-	public Polygon getPolygon() {
-		return new Polygon(based);
+	public Polygon getBased() {
+		return based;
+	}
+
+	public void setBased(Polygon based) {
+		this.based = based;
 	}
 
 	public double getHeight() {
 		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
 	}
 
 	@Override

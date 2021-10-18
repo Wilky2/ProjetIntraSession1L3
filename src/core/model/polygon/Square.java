@@ -1,5 +1,7 @@
 package core.model.polygon;
 
+import core.model.Point;
+
 public class Square extends Rectangle {
 	
 	private double cote;
@@ -23,6 +25,12 @@ public class Square extends Rectangle {
 		return this.cote;
 	}
 
+	public void setCote(double cote) {
+		super.setLarge(cote);
+		super.setLength(cote);
+		this.cote = cote;
+	}
+	
 	public double area() {
 		return this.cote*this.cote;
 	}

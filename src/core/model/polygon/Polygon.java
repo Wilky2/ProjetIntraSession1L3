@@ -16,8 +16,12 @@ public class Polygon {
 		this.listeSommet = Arrays.copyOf(p.listeSommet, p.listeSommet.length);
 	}
 	
-	public Point getSommmet(int i) {
+	public Point getSommet(int i) {
 		return new Point(this.listeSommet[i]);
+	}
+	
+	public void setSommet(Point p,int i) {
+		 this.listeSommet[i] = new Point(p);
 	}
 	
 	public double getCote(int i) {
