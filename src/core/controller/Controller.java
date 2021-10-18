@@ -62,7 +62,7 @@ public class Controller {
     }
 
     try {
-      a.display("Entrer 1 pour continer");
+      a.display("\nEntrer 1 pour continer");
 
       choice = reading.readingInt();
 
