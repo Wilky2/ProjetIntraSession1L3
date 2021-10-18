@@ -2,6 +2,8 @@ package core.controller;
 
 import java.util.InputMismatchException;
 
+import core.model.Circle;
+import core.model.Point;
 import core.model.polygon.Polygon;
 import core.model.polygon.Rectangle;
 import core.model.polygon.Square;
@@ -16,6 +18,8 @@ public class Controller {
 
   Polygon polygon;
   Prism prism;
+  Point point;
+  Circle circle;
   Rectangle rec = new Rectangle(0, 0);
   Square square = new Square(0);
 
@@ -38,9 +42,15 @@ public class Controller {
         case 1:
           polygonSwitchCase();
           break;
+
         case 2:
           prismSwitchCase();
-        break;
+          break;
+
+          case 3:
+          circle();
+          break;
+
         default:
           // switchCaseAllProgramm();
           a.display("Choix inexistant, rentrer une choix valide");
@@ -56,7 +66,7 @@ public class Controller {
 
       choice = reading.readingInt();
 
-      if (choice==1) {
+      if (choice == 1) {
         switchCaseAllProgramm();
       } else {
         a.display("Fin Programme");
@@ -74,21 +84,25 @@ public class Controller {
 
     int choice = reading.readingInt();
 
-    switch (choice) {
-      case 1:
-        polygonViewRectangle();
-        break;
-      case 2:
-        polygonViewSquare();
-        break;
-      case 3:
-        polygonViewPolygon();
-        break;
+    if (choice>0 && choice <=3) {
+      switch (choice) {
+        case 1:
+          polygonViewRectangle();
+          break;
+        case 2:
+          polygonViewSquare();
+          break;
+        case 3:
+          polygonViewPolygon();
+          break;
 
-      default:
-        a.getdPolygone().listViewPolygon();
-        System.out.println("Choix inexistant");
-        break;
+        default:
+          a.getdPolygone().listViewPolygon();
+          System.out.println("Choix inexistant");
+          break;
+      }
+    } else {
+      System.out.println("choix non valide entrer a nouveau");
     }
   }
 
@@ -133,32 +147,39 @@ public class Controller {
     a.getdPrism().listViewPrism();
 
     int choice = reading.readingInt();
+    if (choice>0 && choice <=3) {
 
-    switch (choice) {
-      case 1:
-        prismViewCube();
-        break;
-      case 2:
-        prismViewCube();
-        break;
-      case 3:
-        prismViewCube();
-        break;
+      switch (choice) {
+        case 1:
+          prismViewCube();
+          break;
+        case 2:
+          prismViewCube();
+          break;
+        case 3:
+          prismViewCube();
+          break;
 
-      default:
-        a.getdPrism().listViewPrism();
-        System.out.println("Choix inexistant !");
-        break;
+        default:
+          a.getdPrism().listViewPrism();
+          System.out.println("Choix inexistant !");
+          break;
+      }
+
+    } else {
+      System.out.println("choix non valide entrer a nouveau");
     }
   }
 
   public void prismViewCube() {
 
-    a.getdCircle().showRectanglePart();
+    a.getdPrism().listViewPrism();
     System.out.println("\nEntrer la valeur ");
 
     double val1 = reading.readingDouble();
     prism = new Cube(val1);
+
+    a.display(prism.toString());
 
     a.display("\nL'aire du prisme = " + prism.areaBased());
     a.display("La volume = " + prism.volume());
@@ -175,6 +196,7 @@ public class Controller {
     double val2 = reading.readingDouble();
 
     prism = new Prism(null, val2);
+    a.display(prism.toString());
 
     a.display("L'aire du rectangle = " + prism.areaBased());
     a.display("Perimetre de rectangle = " + prism.volume());
@@ -198,6 +220,32 @@ public class Controller {
 
   // ===============Circle Parts================
 
-  
+  public void circle() {
+    a.getdCircle().listViewCircle();
+    double val1, val2, val3;
+
+    System.out.println("Absciesse");
+    val1 = reading.readingDouble();
+
+    System.out.println("Ordonne Largeur");
+    val2 = reading.readingDouble();
+
+    System.out.println("Rayon");
+    val3 = reading.readingDouble();
+
+    circle = new Circle(new Point(val1, val2), val3);
+    a.display(circle.toString());
+
+    a.display("\nL'aire du cercle = " + circle.area());
+    a.display("Perimetre du cercle = " + circle.perimeter());
+  }
+  // ===============end Circle================
+
+  // ===============Cylender Parts================
+
+  public void cylenderSwitchCylender() {
+
+  }
+  // ===============end Cylender================
 
 }
