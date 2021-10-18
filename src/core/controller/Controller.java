@@ -52,9 +52,13 @@ public class Controller {
           circleSwitchCase();
           break;
 
+          case 4:
+          cylenderSwitchcase();
+          break;
+
         default:
           // switchCaseAllProgramm();
-          a.display("Choix inexistant, rentrer une choix valide");
+          a.display("Choix inexistant, rentrer un choix valide");
           break;
       }
     } catch (InputMismatchException e) {
@@ -155,10 +159,10 @@ public class Controller {
           prismViewCube();
           break;
         case 2:
-          prismViewCube();
+          prismViewPrism();
           break;
         case 3:
-          prismViewCube();
+          prismViewRectangleParrallepiped();
           break;
 
         default:
@@ -187,7 +191,7 @@ public class Controller {
 
   }
 
-  public void prismViewprism() {
+  public void prismViewPrism() {
     a.getdPrism().showPrismPart();
     System.out.println("\nEntrer Les Values ");
 
@@ -247,7 +251,7 @@ public class Controller {
 
   // ===============Cylender Parts================
 
-  public void cylenderSwitchCylender() {
+  public void cylenderSwitchcase() {
 
   }
   
