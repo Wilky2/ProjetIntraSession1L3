@@ -9,10 +9,18 @@ public class Cube extends RectangleParrallelepiped {
 		this.arrete = arrete;
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getArrete() {
 		return arrete;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		return "Cube [arrete=" + arrete + ", toString()=" + super.toString() + "]";

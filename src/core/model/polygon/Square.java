@@ -14,19 +14,35 @@ public class Square extends Rectangle {
 		this.cote = s.cote;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		return "Square [cote=" + cote + ", toString()=" + super.toString() + "]";
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double getCote() {
 		return this.cote;
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double area() {
 		return this.cote*this.cote;
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double perimeter() {
 		return this.cote*4;
 	}

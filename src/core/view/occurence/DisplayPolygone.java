@@ -21,6 +21,10 @@ public class DisplayPolygone {
         display("\n********Main Carre********");
     }
 
+    
+    /** 
+     * @param str
+     */
     public void display(Object str) {
         System.out.println(str);
     }

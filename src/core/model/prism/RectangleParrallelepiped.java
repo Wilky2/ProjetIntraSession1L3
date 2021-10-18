@@ -12,14 +12,26 @@ public class RectangleParrallelepiped extends Prism {
 		this.length = length;
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getLarge() {
 		return large;
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getLength() {
 		return length;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		return "RectangleParrallelepiped [large=" + large + ", length=" + length + ", toString()=" + super.toString()

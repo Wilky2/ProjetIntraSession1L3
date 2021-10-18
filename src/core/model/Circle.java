@@ -9,24 +9,44 @@ public class Circle {
 		this.ray = ray;
 	}
 
+	
+	/** 
+	 * @return Point
+	 */
 	public Point getCenter() {
 		return new Point(center);
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getRay() {
 		return ray;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		return "Circle [center=" + center + ", ray=" + ray + "]";
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double area() {
 		
 		return Math.PI * ray * ray;
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double perimeter() {
 		return 2*Math.PI*ray;
 	}

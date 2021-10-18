@@ -21,23 +21,43 @@ public class Prism {
 	public Prism(double d, double val2) {
 	}
 
+	
+	/** 
+	 * @return Polygon
+	 */
 	public Polygon getPolygon() {
 		return new Polygon(based);
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getHeight() {
 		return height;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		return "Prism [polygon=" + based + ", height=" + height + "]";
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double areaBased() {
 		return based.area();
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double volume() {
 		return areaBased() * height;
 	}

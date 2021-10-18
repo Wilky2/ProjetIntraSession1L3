@@ -10,11 +10,19 @@ public class Reader {
 		sc = new Scanner(System.in);
 	}
 	
+	
+	/** 
+	 * @return int
+	 */
 	public int readingInt() {
 		return sc.nextInt();
 		
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double readingDouble() {
 		return sc.nextDouble();
 		

@@ -21,6 +21,10 @@ public class DisplayPrism {
         display("\n********Main Rectangle Parrallepipede********");
     }
 
+    
+    /** 
+     * @param str
+     */
     public void display(Object str) {
         System.out.println(str);
     }

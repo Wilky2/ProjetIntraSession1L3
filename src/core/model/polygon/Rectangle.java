@@ -19,23 +19,43 @@ public class Rectangle extends Polygon {
 		this.length = r.length;
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getLarge() {
 		return this.large;
 	}
 
+	
+	/** 
+	 * @return double
+	 */
 	public double getLength() {
 		return this.length;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
 		return "Rectangle [l=" + large + ", L=" + length + ", toString()=" + super.toString() + "]";
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double area() {
 		return this.large*this.length;
 	}
 	
+	
+	/** 
+	 * @return double
+	 */
 	public double perimeter() {
 		return (this.large+this.length)*2;
 	}

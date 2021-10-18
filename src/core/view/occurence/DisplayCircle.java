@@ -25,6 +25,10 @@ public class DisplayCircle {
         display("cotes : ");
     }
 
+    
+    /** 
+     * @param str
+     */
     public void display(Object str) {
         System.out.println(str);
     }

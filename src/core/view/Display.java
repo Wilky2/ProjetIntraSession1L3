@@ -20,18 +20,34 @@ public class Display {
         display("choix 1-4");
     }
 
+    
+    /** 
+     * @return DisplayPolygone
+     */
     public DisplayPolygone getdPolygone() {
         return dPolygone;
     }
 
+    
+    /** 
+     * @return DisplayCircle
+     */
     public DisplayCircle getdCircle() {
         return dCircle;
     }
 
+    
+    /** 
+     * @return DisplayPrism
+     */
     public DisplayPrism getdPrism() {
         return dPrism;
     }
 
+    
+    /** 
+     * @param str
+     */
     public void display(Object str) {
         System.out.println(str);
     }
