@@ -17,8 +17,8 @@ public class DisplayPrism {
         display("\n************Main Prisme************");
     }
 
-    public void showRectangleParrallepipedPart() {
-        display("\n************Main Rectangle Parrallepipede************");
+    public void showRectangleParrallelepipedPart() {
+        display("\n************Main Rectangle Parrallelepiped************");
     }
 
     

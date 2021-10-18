@@ -127,6 +127,16 @@ public class Controller {
   }
 
   public void polygonViewPolygon() {
+    a.getdPolygone().showPolygonPart();
+    System.out.println("Entrer les valeurs ");
+
+    double val1 = reading.readingInt();
+    a.display("Value 1");
+
+    double val2 = reading.readingInt();
+    a.display("value 2");
+
+    // a continuer...
 
   }
 
@@ -162,7 +172,7 @@ public class Controller {
           prismViewPrism();
           break;
         case 3:
-          prismViewRectangleParrallepiped();
+          prismViewRectangleRectangleParrallelepiped();
           break;
 
         default:
@@ -178,7 +188,7 @@ public class Controller {
 
   public void prismViewCube() {
 
-    a.getdPrism().listViewPrism();
+    a.getdPrism().showCubePart();
     System.out.println("\nEntrer la valeur ");
 
     double val1 = reading.readingDouble();
@@ -207,8 +217,8 @@ public class Controller {
     a.display("Perimetre de rectangle = " + prism.volume());
   }
 
-  public void prismViewRectangleParrallepiped() {
-    a.getdPrism().listViewPrism();
+  public void prismViewRectangleRectangleParrallelepiped() {
+    a.getdPrism().showRectangleParrallelepipedPart();
 
     System.out.println("\nEntrer Les Values ");
 
