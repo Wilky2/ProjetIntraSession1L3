@@ -203,22 +203,14 @@ public class Controller {
 
   public void prismViewPrism() {
     a.getdPrism().showPrismPart();
-    // System.out.println("\nEntrer Les Values ");
 
-    System.out.println(" Entrer valeur Abscisse");
+    System.out.println(" Premier valeur");
     double val1 = reading.readingDouble();
 
-    System.out.println(" Entrer valeur Ordonne");
+    System.out.println(" Deuxieme valeur");
     double val2 = reading.readingDouble();
 
-    System.out.println(" Entrer valeur Hauteur");
-    double val3 = reading.readingDouble();
-
-
-    // polygon = new Polygon(val3);
     prism = new Prism(val1, val2);
-
-    // prism = new Prism(null, val2);
     a.display(prism.toString());
 
     a.display("L'aire du rectangle = " + prism.areaBased());
