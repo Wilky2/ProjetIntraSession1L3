@@ -18,7 +18,7 @@ public class DisplayPolygone {
     }
 
     public void showPolygonPart() {
-        display("\n********Main Carre********");
+        display("\n***************Main Carre***************");
     }
 
     

@@ -4,7 +4,7 @@ public class DisplayCircle {
 
 
     public void listViewCircle() {
-        display("\n******Menu Circle*******");
+        display("\n***************Menu Circle***************");
         
     }
 

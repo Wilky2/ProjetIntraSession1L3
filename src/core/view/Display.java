@@ -11,7 +11,7 @@ public class Display {
     private DisplayPrism dPrism = new DisplayPrism();
 
     public void displayMenuSec() {
-        display("\n******Running Head Programm**********");
+        display("\n***************Running Head Programm***************");
         display("1 -Polygone");
         display("2 -Prisme");
         display("3 -Cercle");

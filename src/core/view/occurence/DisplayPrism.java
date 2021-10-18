@@ -3,22 +3,22 @@ package core.view.occurence;
 public class DisplayPrism {
 
     public void listViewPrism() {
-        display("\n******Menu Prism*******");
+        display("\n***************Menu Prism***************");
         display("1-  Cube");
-        display("2-  Prism");
+        display("2-  Prisme");
         display("3-  Rectangle");
     }
 
     public void showCubePart() {
-        display("\n********Main Cube********");
+        display("\n************Main Cube************");
     }
 
     public void showPrismPart() {
-        display("\n********Main Prism********");
+        display("\n************Main Prisme************");
     }
 
     public void showRectangleParrallepipedPart() {
-        display("\n********Main Rectangle Parrallepipede********");
+        display("\n************Main Rectangle Parrallepipede************");
     }
 
     

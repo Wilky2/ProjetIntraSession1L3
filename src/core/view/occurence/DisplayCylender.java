@@ -2,7 +2,7 @@ package core.view.occurence;
 
 public class DisplayCylender {
     public void listViewCylender() {
-        display("\n******Menu Cylender*******");
+        display("\n***************Menu Cylender***************");
         display("1-  Cylender");
         // display("2-  Carre");
         // display("3-  Polygone");

@@ -203,12 +203,12 @@ public class Controller {
   }
 
   public void prismViewRectangleParrallepiped() {
-    a.getdPrism().showRectangleParrallepipedPart();
+    a.getdPrism().listViewPrism();
 
     System.out.println("\nEntrer Les Values ");
 
     System.out.println(" Entrer valeur Base");
-    double val1 = reading.readingDouble();
+    // double val1 = reading.readingDouble();
 
     System.out.println(" Entrer valeur Hauteur");
     double val2 = reading.readingDouble();
