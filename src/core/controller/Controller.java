@@ -17,7 +17,7 @@ public class Controller {
   Rectangle rec = new Rectangle(0, 0);
   Square square = new Square(0);
 
-  // ------------Running Programm---------------
+  // ------------Running Programm--------------- 
 
   public void start() {
     switchCaseAllProgramm();
