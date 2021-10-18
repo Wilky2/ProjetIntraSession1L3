@@ -20,8 +20,8 @@ public class Controller {
   Prism prism;
   Point point;
   Circle circle;
-  Rectangle rec = new Rectangle(0, 0);
-  Square square = new Square(0);
+  Rectangle rec;
+  Square square;
 
   // ------------Running Programm---------------
 
@@ -142,7 +142,7 @@ public class Controller {
 
   public void polygonViewSquare() {
     a.getdPolygone().showSquarePart();
-    System.out.println("Entrer le cote ");
+    // System.out.println("Entrer le cote ");
 
     System.out.println("Valeur du cote");
     double val1 = reading.readingDouble();
@@ -203,14 +203,22 @@ public class Controller {
 
   public void prismViewPrism() {
     a.getdPrism().showPrismPart();
-    System.out.println("\nEntrer Les Values ");
+    // System.out.println("\nEntrer Les Values ");
 
-    System.out.println(" Entrer valeur Base");
+    System.out.println(" Entrer valeur Abscisse");
+    double val1 = reading.readingDouble();
 
-    System.out.println(" Entrer valeur Hauteur");
+    System.out.println(" Entrer valeur Ordonne");
     double val2 = reading.readingDouble();
 
-    prism = new Prism(null, val2);
+    System.out.println(" Entrer valeur Hauteur");
+    double val3 = reading.readingDouble();
+
+
+    // polygon = new Polygon(val3);
+    prism = new Prism(val1, val2);
+
+    // prism = new Prism(null, val2);
     a.display(prism.toString());
 
     a.display("L'aire du rectangle = " + prism.areaBased());
