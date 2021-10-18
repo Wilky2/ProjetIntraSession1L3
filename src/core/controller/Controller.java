@@ -198,45 +198,6 @@ public class Controller {
 
   // ===============Circle Parts================
 
-  public void name() {
-    int choice;
-    try {
-      a.displayMenuSec();
-      choice = reading.readingInt();
-
-      switch (choice) {
-        case 1:
-          polygonSwitchCase();
-          break;
-        case 2:
-          prismSwitchCase();
-        break;
-        default:
-          // switchCaseAllProgramm();
-          a.display("Choix inexistant, rentrer une choix valide");
-          break;
-      }
-
-    } catch (InputMismatchException e) {
-      a.display("Choix inexistant, rentrer une choix valide");
-      reading.readingString();
-    }
-
-    // second
-
-    try {
-      a.display("Entrer 1 pour continer");
-
-      choice = reading.readingInt();
-
-      if (choice==1) {
-        // run();
-      } else {
-        a.display("Fin Programme");
-      }
-    } catch (InputMismatchException e) {
-      a.display("Fin programme");
-    }
-  }
+  
 
 }
