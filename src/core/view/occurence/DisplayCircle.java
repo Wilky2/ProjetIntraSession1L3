@@ -1,34 +1,15 @@
 package core.view.occurence;
 
+import core.view.Display;
+
 public class DisplayCircle {
 
 
     public void listViewCircle() {
-        display("\n***************Menu Circle***************");
-        
-    }
-
-    // public void showRectanglePart() {
-    //     display("\n********Main Rectangle********");
-    //     display("Entrer les deux cotes : ");
-    // }
-
-    // public void showSquarePart() {
-    //     display("\n********Main Carre********");
-    //     display("cotes : ");
-    // }
-
-    // public void showPolygonPart() {
-    //     display("\n********Main Carre********");
-    //     display("cotes : ");
-    // }
-
-    
-    /** 
-     * @param str
-     */
-    public void display(Object str) {
-        System.out.println(str);
+    	Display.display("\n***************Menu Circle***************");
+    	Display.display("1-  Perimetre d'un cercle");
+    	Display.display("2-  Surface d'un cercle");
+    	Display.display("3-  Afficher les caracteristiques du cercle");
     }
 
 }

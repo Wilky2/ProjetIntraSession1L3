@@ -1,14 +1,23 @@
 package core.view;
 
 import core.view.occurence.DisplayCircle;
+import core.view.occurence.DisplayCylinder;
 import core.view.occurence.DisplayPolygone;
 import core.view.occurence.DisplayPrism;
 
 public class Display {
 
-    private DisplayCircle dCircle = new DisplayCircle();
-    private DisplayPolygone dPolygone = new DisplayPolygone();
-    private DisplayPrism dPrism = new DisplayPrism();
+    private DisplayCircle dCircle; 
+    private DisplayPolygone dPolygone; 
+    private DisplayPrism dPrism; 
+    private DisplayCylinder cylinder;
+    
+    public Display() {
+    	dCircle = new DisplayCircle();
+    	dPolygone = new DisplayPolygone();
+    	dPrism = new DisplayPrism();
+    	cylinder = new DisplayCylinder();
+    }
 
     public void displayMenuSec() {
         display("\n***************Running Head Programm***************");
@@ -21,34 +30,39 @@ public class Display {
     }
 
     
-    /** 
-     * @return DisplayPolygone
-     */
-    public DisplayPolygone getdPolygone() {
+    
+    
+    public DisplayCylinder getCylinder() {
+		return cylinder;
+	}
+
+
+
+
+	public void setCylinder(DisplayCylinder cylinder) {
+		this.cylinder = cylinder;
+	}
+
+
+
+
+	public DisplayPolygone getdPolygone() {
         return dPolygone;
     }
 
-    
-    /** 
-     * @return DisplayCircle
-     */
+  
     public DisplayCircle getdCircle() {
         return dCircle;
     }
 
     
-    /** 
-     * @return DisplayPrism
-     */
+   
     public DisplayPrism getdPrism() {
         return dPrism;
     }
 
-    
-    /** 
-     * @param str
-     */
-    public void display(Object str) {
+   
+    public static void display(Object str) {
         System.out.println(str);
     }
 }

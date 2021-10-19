@@ -12,24 +12,18 @@ public class Polygon {
 		this.listeSommet = Arrays.copyOf(listeSommet, listeSommet.length);
 	}
 	
-	public Polygon(Polygon p) {
+	public Polygon(final Polygon p) {
 		this.listeSommet = Arrays.copyOf(p.listeSommet, p.listeSommet.length);
 	}
 	
-	
-	/** 
-	 * @param i
-	 * @return Point
-	 */
-	public Point getSommmet(int i) {
+	public Point getSommet(int i) {
 		return new Point(this.listeSommet[i]);
 	}
 	
+	public void setSommet(Point p,int i) {
+		 this.listeSommet[i] = new Point(p);
+	}
 	
-	/** 
-	 * @param i
-	 * @return double
-	 */
 	public double getCote(int i) {
 		if(i==this.listeSommet.length-1) {
 				return Point.distance(this.listeSommet[0], this.listeSommet[this.listeSommet.length-1]);
@@ -37,27 +31,15 @@ public class Polygon {
 		return Point.distance(this.listeSommet[i], this.listeSommet[i+1]);
 	}
 	
-	
-	/** 
-	 * @return int
-	 */
 	public int getNombreCote() {
 		return this.listeSommet.length;
 	}
-	
-	
-	/** 
-	 * @return String
-	 */
+
 	@Override
 	public String toString() {
-		return "Polygon [nombre Cote=" + getNombreCote() + ", listeSommet=" + Arrays.toString(this.listeSommet) + "]";
+		return "Polygon [listeSommet=" + Arrays.toString(listeSommet) + "]";
 	}
 
-	
-	/** 
-	 * @return double
-	 */
 	public double area(){
 		
 		double result1=0;
@@ -75,10 +57,6 @@ public class Polygon {
 		return Math.abs((result1-result2)/2);
 	}
 	
-	
-	/** 
-	 * @return double
-	 */
 	public double perimeter() {
 		
 		double result = 0;

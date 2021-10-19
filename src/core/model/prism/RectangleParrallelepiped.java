@@ -11,30 +11,39 @@ public class RectangleParrallelepiped extends Prism {
 		this.large = large;
 		this.length = length;
 	}
-
 	
-	/** 
-	 * @return double
-	 */
+	public RectangleParrallelepiped(final RectangleParrallelepiped r) {
+		super(r);
+		this.large = r.large;
+		this.length = r.length;
+	}
+
 	public double getLarge() {
 		return large;
 	}
-
 	
-	/** 
-	 * @return double
-	 */
+	public void setLarge(double large) {
+		
+		super.setBased(new Rectangle(this.length,large));
+		this.large = large;
+		
+	}
+
 	public double getLength() {
 		return length;
 	}
-
 	
-	/** 
-	 * @return String
-	 */
+	public void setLength(double length) {
+		super.setBased(new Rectangle(length,large));
+		this.length = length;
+	}
+
 	@Override
 	public String toString() {
 		return "RectangleParrallelepiped [large=" + large + ", length=" + length + ", toString()=" + super.toString()
 				+ "]";
 	}
+
+	
+
 }

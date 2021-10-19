@@ -8,21 +8,27 @@ public class Cube extends RectangleParrallelepiped {
 		super(arrete,arrete,arrete);
 		this.arrete = arrete;
 	}
-
 	
-	/** 
-	 * @return double
-	 */
+	public Cube(final Cube c) {
+		super(c);
+		this.arrete = c.arrete;
+	}
+
 	public double getArrete() {
 		return arrete;
 	}
-
 	
-	/** 
-	 * @return String
-	 */
+	public void setArrete(double arrete) {
+		super.setLength(arrete);
+		super.setLarge(arrete);
+		super.setHeight(arrete);
+		this.arrete = arrete;
+	}
+
 	@Override
 	public String toString() {
 		return "Cube [arrete=" + arrete + ", toString()=" + super.toString() + "]";
 	}
+
+	
 }

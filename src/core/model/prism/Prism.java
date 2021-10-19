@@ -13,53 +13,40 @@ public class Prism {
 		this.height = height;
 	}
 	
-	public Prism(Prism p) {
-		this.based = new Polygon(p.getPolygon());
+	public Prism(final Prism p) {
+		this.based = p.based;
 		this.height = p.height;
 	}
 
-	public Prism(double d, double val2) {
+	public Polygon getBased() {
+		return based;
 	}
 
-	
-	/** 
-	 * @return Polygon
-	 */
-	public Polygon getPolygon() {
-		return new Polygon(based);
+	public void setBased(Polygon based) {
+		this.based = based;
 	}
 
-	
-	/** 
-	 * @return double
-	 */
 	public double getHeight() {
 		return height;
 	}
 
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
 	
-	/** 
-	 * @return String
-	 */
+	
 	@Override
 	public String toString() {
-		return "Prism [polygon=" + based + ", height=" + height + "]";
+		return "Prism [based=" + based + ", height=" + height + "]";
 	}
-	
-	
-	/** 
-	 * @return double
-	 */
+
 	public double areaBased() {
-		return based.area();
+		return this.based.area();
 	}
 	
-	
-	/** 
-	 * @return double
-	 */
 	public double volume() {
-		return areaBased() * height;
+		return areaBased() * this.height;
 	}
 	
 }

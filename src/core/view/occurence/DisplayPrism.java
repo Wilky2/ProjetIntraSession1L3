@@ -1,32 +1,35 @@
 package core.view.occurence;
 
+import core.view.Display;
+
 public class DisplayPrism {
 
     public void listViewPrism() {
-        display("\n***************Menu Prism***************");
-        display("1-  Cube");
-        display("2-  Prisme");
-        display("3-  Rectangle");
+    	Display.display("\n***************Menu Prism***************");
+        Display.display("1-  Cube");
+        Display.display("2-  Prisme");
+        Display.display("3-  parrallelepipede rectangle");
     }
 
     public void showCubePart() {
-        display("\n************Main Cube************");
+    	Display.display("\n************Main Cube************");
+    	Display.display("1-   surface de la base");
+    	Display.display("2-   volume du cube");
+    	Display.display("3-   afficher les caracteristiques du cube");
     }
 
     public void showPrismPart() {
-        display("\n************Main Prisme************");
+    	Display.display("\n************Main Prisme************");
+    	Display.display("1-   surface de la base");
+    	Display.display("2-   volume du prisme");
+    	Display.display("3-   afficher les caracteristiques du prisme");
     }
 
     public void showRectangleParrallelepipedPart() {
-        display("\n************Main Rectangle Parrallelepiped************");
-    }
-
-    
-    /** 
-     * @param str
-     */
-    public void display(Object str) {
-        System.out.println(str);
+    	Display.display("\n************Main Rectangle Parrallelepiped************");
+    	Display.display("1-   surface de la base");
+    	Display.display("2-   volume du parrallelepipede rectangle");
+    	Display.display("3-   afficher les caracteristiques du parrallelepipede rectangle");
     }
 
 }
